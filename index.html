@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse of Array</title>
+</head>
+<body>
+    <h1>reversed array value</h1>
+    <input type="text" id="ins">
+    <button onclick="send()">push to array</button>
+    <button onclick="send1()">result</button>
+    <h2 id="showar"></h2>
+    <h2 id="result"></h2>
+
+    <script>
+        var ins=document.getElementById("ins")
+     
+        var ar=[];
+        function send(){
+           ar.push(Number(ins.value));
+           if(ar.length<2){
+            alert("please add one more array value");
+           }
+           document.getElementById("showar").innerHTML="Array value is   : " +ar.toString()
+
+        }
+         var rar=[]
+        function send1(){
+            if(ar.length<2){
+                alert("please add  one more array value")
+            }
+            else{
+                for(let i=ar.length-1; i>=0;i--){
+                    rar.push(ar[i]);
+                }
+                  ar=rar;
+                  console.log(ar)
+                document.getElementById("result").innerHTML="Array value is : "+rar.toString();
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
